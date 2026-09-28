@@ -42,6 +42,7 @@ If none exists, a tool may fall back to `.agents/product-marketing-context.md` f
 - **Facts over adjectives.** "Median time to first call: 14 minutes (PostHog, Sep 2026)" is useful. "Onboarding is fast" is not.
 - **Unknown is a valid answer.** A file full of honest `unknown` values is better than one full of guesses. The unknowns are where the work is.
 - **Label what you inferred.** Facts carry their source. A reasonable qualitative inference carries `(inferred)`, and proposed wording carries `(proposed)`. Proposed wording never contains invented numbers: leave a placeholder such as `<N minutes>` for the team to fill.
+- **Keep machine-read values bare.** Frontmatter values and the `Pass` column of Funnel health hold only the allowed values. Put an inference label in a YAML comment (`stage: growth # inferred`) or in the Now column, never next to the value.
 - **Short enough to read in five minutes.** Aim for under 300 lines. Link out to detail rather than pasting it in.
 - **No secrets.** No API keys, internal URLs that expose infrastructure, customer names you have no permission to share, or revenue figures you would not publish.
 - **One file, one truth.** Other documents can link to DEVREL.md instead of repeating it.
@@ -135,7 +136,7 @@ A table with one row per stage. Each row says whether the stage gate currently p
 | Monetization | Paying deepens trust rather than replacing it | too early | n/a |
 ```
 
-`Pass` is one of `yes`, `no`, `unknown` or `n/a`. The default gates are listed in [Default stage gates](#default-stage-gates). Change a gate's threshold if you have a reason, and say why in the row.
+`Pass` is exactly one of `yes`, `no`, `unknown` or `n/a`, with nothing else in the cell. `yes` needs evidence against the gate's threshold (a measured number, or for Awareness, known signup sources). Reputation, logos or testimonials are not evidence: mark `unknown` and say what you saw in the Now column. The default gates are listed in [Default stage gates](#default-stage-gates). Change a gate's threshold if you have a reason, and say why in the row.
 
 The rule behind the table: don't scale a stage until the one before it passes. Awareness spent on a broken onboarding path is wasted budget.
 
