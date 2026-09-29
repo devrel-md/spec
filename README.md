@@ -12,7 +12,7 @@ Paste that into Claude Code, Cursor, Codex or any agent that can fetch a URL. Th
 - [A worked example](examples/acme-vector.DEVREL.md) (fictional product)
 - [A blank template](TEMPLATE.md)
 - [Frontmatter JSON Schema](schema/frontmatter.schema.json)
-- [Free skills that read DEVREL.md](https://github.com/mplacona/devrel-skills)
+- [Free skills that read DEVREL.md](https://github.com/devrel-md/skills)
 
 ## Why
 
