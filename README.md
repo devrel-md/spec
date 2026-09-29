@@ -1,3 +1,10 @@
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/devrel-md-mark-light.svg">
+    <img src="assets/devrel-md-mark-dark.svg" alt="DEVREL.md" width="64" height="64">
+  </picture>
+</p>
+
 # DEVREL.md
 
 A Markdown file that tells people and AI agents who your developer product is for, what a developer's first success looks like, and where the developer journey breaks.
